@@ -222,7 +222,16 @@
     document.querySelector('.forum').addEventListener('submit', function(e){
       e.preventDefault(); 
       alert(document.querySelector('.nameCopy').value + document.querySelector('.emailCopy').value);    
-    })
+        
+        var new_contact =
+{
+      "First name": document.querySelector('.nameCopy').value,
+      "Email": document.querySelector('.emailCopy').value
+};
+var identifier = document.querySelector('.emailCopy').value;
+fwcrm.identify(identifier, new_contact)
+        
+})
  </script>
 
 
